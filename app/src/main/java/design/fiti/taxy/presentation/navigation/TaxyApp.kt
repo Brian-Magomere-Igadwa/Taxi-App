@@ -13,22 +13,23 @@ import design.fiti.taxy.presentation.screens.SignUp.SignUpScreen
 import design.fiti.taxy.presentation.screens.TicketListings.TicketListingsScreen
 import design.fiti.taxy.presentation.screens.TicketReceiptListing.TicketReceiptListingScreen
 import design.fiti.taxy.presentation.screens.TravelDestination.TravelDestinationScreen
+import design.fiti.taxy.presentation.screens.TravelDestination.TravelDestinationViewModel
 
 @Composable
-fun TaxyApp() {
+fun TaxyApp(mapsViewModel: TravelDestinationViewModel) {
     val navController = rememberNavController()
 
     Scaffold(modifier = Modifier.fillMaxSize()) {
         NavHost(
             navController = navController,
             modifier = Modifier.padding(it),
-            startDestination = NavRoutes.Login.name
+            startDestination = NavRoutes.SignUp.name
         ) {
             composable(route = NavRoutes.Login.name) {
                 LoginScreen(navController = navController)
             }
             composable(route = NavRoutes.TravelDestination.name) {
-                TravelDestinationScreen(navController = navController)
+                TravelDestinationScreen(navController = navController, mapsViewModel = mapsViewModel)
             }
             composable(route = NavRoutes.SignUp.name) {
                 SignUpScreen(navController = navController)

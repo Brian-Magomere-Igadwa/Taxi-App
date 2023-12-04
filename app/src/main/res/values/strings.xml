@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Taxy</string>
+    <string name="app_logo">Taxi App</string>
+    <string name="image_asset">Image</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="from_to_icon">From One Place To Another Icon</string>
+    <string name="to_icon">To another Place</string>
+    <string name="select_date">Click to Select a date to travel</string>
 </resources>
